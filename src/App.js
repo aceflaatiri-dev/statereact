@@ -8,15 +8,16 @@ class App extends React.Component {
     imgSrc: "https://via.placeholder.com/150",
     profession: "Software Engineer"
   },
-  shows: false
+  shows: false,
+  interval: 0
 };
   
   
   render() {
     return (
-      <div>
-        <h1>Hello React Class Component</h1>
-      </div>
+<button onClick={() => this.setState({ shows: !this.state.shows })}>
+  {this.state.shows ? "Hide Profile" : "Show Profile"}
+</button>
     );
   }
 }
